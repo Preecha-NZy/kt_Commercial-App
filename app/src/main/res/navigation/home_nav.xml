@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.ceta.homeFragment.homeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/homeToSearch"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+        <action
+            android:id="@+id/homeToDetail"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.example.ceta.basketFragment.basketFragment"
+        android:label="basket_fragment"
+        tools:layout="@layout/basket_fragment" >
+        <action
+            android:id="@+id/orderTopayment"
+            app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/basketFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.ceta.profileFragment.profileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment">
+        <action
+            android:id="@+id/profileTologin"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/profileFragment" />
+        <action
+            android:id="@+id/profileToregister"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/profileFragment" />
+        <action
+            android:id="@+id/profileToreview"
+            app:destination="@id/reviewFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.ceta.searchFragment.searchFragment"
+        android:label="searchFragment"
+        tools:layout="@layout/search_fragment">
+        <action
+            android:id="@+id/searchTohome"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/home_nav"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/searchTodetail"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/searchFragment" />
+        <argument
+            android:name="search"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="hide"
+            android:defaultValue="no"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.ceta.detailFragment.detailFragment"
+        android:label="detailFragment"
+        tools:layout="@layout/detail_fragment">
+        <action
+            android:id="@+id/detailToSearch"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/detailTohome"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/detailTologin"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+        <argument
+            android:name="carName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="city"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="search"
+            app:argType="string" />
+        <action
+            android:id="@+id/detailTopayment"
+            app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ceta.loginFragment.loginFragment"
+        android:label="loginFragment">
+        <action
+            android:id="@+id/loginToprofile"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/loginTodetail"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/homeFragment" />
+        <argument
+            android:name="from"
+            android:defaultValue='""'
+            app:argType="string" />
+        <argument
+            android:name="carName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="city"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="search"
+            app:argType="string"
+            app:nullable="true"/>
+        <action
+            android:id="@+id/loginToregister"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.ceta.registerFragment.registerFragment"
+        android:label="registerFragment">
+        <action
+            android:id="@+id/backToprofile"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/homeFragment" />
+        <argument
+            android:name="from"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="carName"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="city"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="search"
+            android:defaultValue='""' />
+        <action
+            android:id="@+id/regisTologin"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.ceta.paymentFragment.paymentFragment"
+        android:label="paymentFragment" >
+        <argument
+            android:name="r_id"
+            app:argType="string[]" />
+        <argument
+            android:name="from"
+            app:argType="string"
+            android:defaultValue='""' />
+        <action
+            android:id="@+id/payTodetail"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+        <argument
+            android:name="carName"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <argument
+            android:name="search"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.example.ceta.reviewFragment.reviewFragment"
+        android:label="reviewFragment" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <argument
+            android:name="date"
+            app:argType="integer" />
+    </fragment>
+</navigation>

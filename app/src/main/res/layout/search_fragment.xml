@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".searchFragment.searchFragment"
+>
+
+        <FrameLayout
+            android:id="@+id/searchBar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/btn_next"
+                    android:text="Search"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/searchEdit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.956"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/searchEdit"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/searchEdit"
+                    android:layout_width="304dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/search_input"
+                    android:focusable="true"
+                    android:hint="Search for cars"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.0"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/backbotton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/ic_back_botton"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/button"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/searchBar_layout"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

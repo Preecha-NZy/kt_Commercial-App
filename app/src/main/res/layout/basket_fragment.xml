@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".basketFragment.basketFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="100dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="53dp" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/backbotton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="19dp"-->
+<!--            android:background="@drawable/ic_back_botton"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/carView"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.0" />-->
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/seguisb"
+            android:text="Cart"
+            android:textColor="@color/red"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/order_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:id="@+id/pay_layout"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="3dp"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Total:"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/price"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="3dp"
+                    android:fontFamily="@font/segoeui"
+                    android:text="Deposit:"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="9dp"
+                    app:layout_constraintBottom_toBottomOf="@id/deposit"
+                    app:layout_constraintEnd_toStartOf="@id/deposit"
+                    app:layout_constraintTop_toTopOf="@id/deposit"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="272dp"
+                    android:fontFamily="@font/bold"
+                    android:text="฿0.00"
+                    android:textColor="@color/red"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/deposit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:fontFamily="@font/seguisb"
+                    android:text="฿0.00"
+                    android:textColor="@color/red"
+                    android:textSize="9dp"
+                    app:layout_constraintEnd_toEndOf="@id/price"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toBottomOf="@id/price"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/pay"
+                    android:layout_width="118dp"
+                    android:layout_height="34dp"
+                    android:text="Payment"
+                    android:textAllCaps="false"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_pay"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/seguisb"
+                    android:paddingStart="15dp"
+                    android:includeFontPadding="false"
+                    android:background="@drawable/btn_orderpay"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

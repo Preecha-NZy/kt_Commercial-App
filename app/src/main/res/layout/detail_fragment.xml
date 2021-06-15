@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        app:layoutDescription="@xml/detail_fragment_xml_constraintlayout8_scene2">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/carView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/carname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="380dp"
+                    android:fontFamily="@font/seguisb"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="380dp" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="top"
+                    android:text="TextView"
+                    android:textColor="@color/red"
+                    android:textSize="22dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/carname"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/PickDate"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/date_input"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawablePadding="7dp"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/seguisb"
+                    android:hint="Start date"
+                    android:paddingStart="7dp"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/price"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/BackDate"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/date_input"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawablePadding="7dp"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/seguisb"
+                    android:hint="End date"
+                    android:paddingStart="7dp"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/PickDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toTopOf="@+id/PickDate"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@id/PickDate"
+                    app:layout_constraintTop_toBottomOf="@id/PickDate"
+                    app:srcCompat="@drawable/icon_map_gas_station" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@id/imageView2"
+                    app:srcCompat="@drawable/car_engine" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="19dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@id/imageView3"
+                    app:srcCompat="@drawable/wheel" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="19dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@id/imageView4"
+                    app:layout_constraintTop_toBottomOf="@id/imageView4"
+                    app:srcCompat="@drawable/gear" />
+
+                <TextView
+                    android:id="@+id/Fuel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:text="เชื้อเพลิง"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/imageView2"
+                    app:layout_constraintStart_toEndOf="@id/imageView2"
+                    app:layout_constraintTop_toTopOf="@id/imageView2" />
+
+                <TextView
+                    android:id="@+id/Engine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:text="ขนาดเครื่องยนต์"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/imageView3"
+                    app:layout_constraintStart_toEndOf="@id/imageView3"
+                    app:layout_constraintTop_toTopOf="@id/imageView3" />
+
+                <TextView
+                    android:id="@+id/Wheel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:text="ระบบขับเคลื่อน"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/imageView4"
+                    app:layout_constraintStart_toEndOf="@id/imageView4"
+                    app:layout_constraintTop_toTopOf="@id/imageView4" />
+
+                <TextView
+                    android:id="@+id/Gear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:text="เกียร์"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/imageView5"
+                    app:layout_constraintStart_toEndOf="@id/imageView5"
+                    app:layout_constraintTop_toTopOf="@id/imageView5" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/review_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Gear" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/payment"
+            android:layout_width="133dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/buy_botton"
+            android:gravity="center"
+            android:text="Payment"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/add_Motion_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="95dp"
+            android:alpha="0"
+            android:background="@drawable/ic_order_motion"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/add_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/ic_oder"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/backbotton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/ic_back_botton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>
